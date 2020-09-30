@@ -426,6 +426,7 @@ ul.menu-list{
     background-size: cover;
     padding: 4rem 5.125rem ;
     border-radius: 10px;
+    margin-bottom: 5rem;
 }
 
 .write-form > .more{
@@ -474,4 +475,23 @@ ul.menu-list{
     font-weight: normal;
     font-size: 1.1rem;
     line-height: 1.8;
+}
+
+.footer{
+    background: #D7D1C9;
+    padding: 4rem 0 5rem;
+    display: flex;
+    justify-content: center;
+}
+
+ul.social_nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 44%;
+}
+
+ul.social_nav > li > a{
+    color: #2E2F22;
+    text-decoration: none;
 }
