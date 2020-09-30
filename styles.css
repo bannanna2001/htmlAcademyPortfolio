@@ -422,6 +422,16 @@ ul.menu-list{
 .write-form{
     display: flex;
     flex-direction: column;
+    background: url("img/form-back.jpg") no-repeat;
+    background-size: cover;
+    padding: 4rem 5.125rem ;
+    border-radius: 10px;
+}
+
+.write-form > .more{
+    margin-top: 20px;
+    background-color: transparent;
+    text-transform: uppercase;
 }
 
 .write-form-items{
@@ -440,10 +450,28 @@ ul.menu-list{
     border: 1px solid #202117;
     border-radius: 10px;
     resize: none; 
+    background-color: rgba(255, 255, 255, .4);
 }
+
+.write-form-item > input::-webkit-input-placeholder {color:#202117;}
+.write-form-item > input::-moz-placeholder          {color:#202117;}
+.write-form-item > input:-moz-placeholder           {color:#202117;}
+.write-form-item > input:-ms-input-placeholder      {color:#202117;}
+.write-form-item > textarea::-webkit-input-placeholder {color:#202117;}
+.write-form-item > textarea::-moz-placeholder          {color:#202117;}
+.write-form-item > textarea:-moz-placeholder           {color:#202117;}
+.write-form-item > textarea:-ms-input-placeholder      {color:#202117;}
 
 .write-form-item{
     flex: 1 1 48%;
     display: flex;
     flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.write-form-item > label{
+    font-family: 'Spectral SC', serif;
+    font-weight: normal;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
