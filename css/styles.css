@@ -617,14 +617,20 @@ ul.social_nav>li>a {
     margin-left: 1.5rem;
 }
 
+.likes-active {
+    filter: drop-shadow(0 0 5px red);
+}
+
 .actions figure:hover {
     cursor: pointer;
-    filter: drop-shadow(0 0 5px red);
+    /* filter: drop-shadow(0 0 5px red); */
+    transform: scale(1.2);
 }
 
 .comments-block {
     margin: 5.3125rem 0 2.5rem 7.5rem;
     width: 60%;
+    word-break: break-all;
 }
 
 .comments {
@@ -648,6 +654,10 @@ ul.social_nav>li>a {
     height: 50px;
     border-radius: 10px;
     margin-right: 1.5rem;
+}
+
+.comment-info>figure>img {
+    border-radius: 10px;
 }
 
 .commet-author {
@@ -714,6 +724,12 @@ ul.social_nav>li>a {
     outline-color: red;
 }
 
+.comment-form-item>.not-valid-text {
+    color: red;
+    border-color: red;
+    outline-color: red;
+}
+
 .hidden {
     display: none;
 }
@@ -722,5 +738,16 @@ ul.social_nav>li>a {
     position: absolute;
     top: 0;
     right: 2rem;
+    color: red;
+}
+
+.comment-form-item {
+    position: relative;
+}
+
+.comment-form-item>.tooltip {
+    position: absolute;
+    top: -2rem;
+    left: 1rem;
     color: red;
 }
