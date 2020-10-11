@@ -12,12 +12,23 @@
 <body>
     <header id="top" class="header">
         <figure class="header-hero">
-            <img class="header-logo" src="../img/hero-2x.jpg" alt="">
+            <picture>
+                <source srcset="../img/hero.webp 1x,
+                                ../img/hero@2x.webp 2x" type="image/webp">
+                <img class="header-logo" src="../img/hero.jpg" srcset="../img/hero@2x.jpg 2x" alt="">
+            </picture>
         </figure>
         <nav class="menu">
-            <figure>
-                <a href="#top"><img class="logo" src="../img/logo-2x.png" alt="Anni Swift"></a>
-            </figure>
+            <a href="#top">
+                <picture>
+                    <source srcset="../img/logo.webp 1x, ../img/logo@2x.webp 2x" type="image/webp">
+                    <img class="logo" src="../img/logo.png 1x" srcset="../img/logo@2x.png 2x" alt="Anni Swift">
+                </picture>
+            </a>
+            <picture style="display: none;">
+                <source srcset="../img/logo.webp 1x, ../img/logo@2x.webp 2x" type="image/webp">
+                <img class="logo" src="../img/logo.png 1x" srcset="../img/logo@2x.png 2x" alt="Anni Swift">
+            </picture>
             <ul class="menu-list">
                 <li><a class="menu-link" href="#articleID">Статьи</a></li>
                 <li><a class="menu-link" href="#aboutID">Обо мне</a></li>
@@ -36,94 +47,123 @@
                 </select>
             </div>
 
-            <div class="articles-row-mini">
-                <article class="article-item-mini article" data-tags="путешествия мотивация">
-                    <a href="articleOne.html">
+            <div class="article__rows">
+                <div class="mini__row">
+                    <article class="article mini" data-tags="путешествия мотивация книги">
+                        <a href="articleOne.html">
+                            <figure class="article-item__img">
+                                <picture>
+                                    <source srcset="../img/image-1.webp 1x,
+                                                    ../img/image-1@2x.webp 2x" type="image/webp">
+                                    <img src="../img/image-1.jpg 1x" srcset="../img/image-1@2x.jpg 2x" alt="People on the street">
+                                </picture>
+                            </figure>
+                            <h3 class="article-item__title">Как себя мотивировать</h3>
+                        </a>
+                        <p class="article-item__desc">Расскажу о биопсихологической теории личности Джеффри Грея.</p>
+                        <footer class="article-add-info">
+                            <div class="article-tags">
+                                <span>Теги:</span>
+                                <span>путешествия</span>
+                                <span>мотивация</span>
+                            </div>
+                            <time class="aarticle-pub-date" datetime="2020-09-29">29.09.2020</time>
+                        </footer>
+                    </article>
+
+                    <article class="article mini" data-tags="город">
+                        <a href="articleOne.html">
+                            <figure class="article-item__img">
+                                <picture>
+                                    <source srcset="../img/image-2.webp 1x,
+                                                ../img/image-2@2x.webp 2x" type="image/webp">
+                                    <img src="../img/image-2.jpg 1x" srcset="../img/image-2@2x.jpg 2x" alt="Ice coffee">
+                                </picture>
+                            </figure>
+                            <h3 class="article-item__title">Где выпить колдбрю в Москве</h3>
+                        </a>
+                        <p class="article-item__desc">Собрала для вас список любимых кофеен, где подают лучший летний напиток.
+                        </p>
+                        <footer class="article-add-info">
+                            <div class="article-tags">
+                                <span>Теги:</span>
+                                <span>город</span>
+                            </div>
+                            <time class="aarticle-pub-date" datetime="2020-07-24">24.07.2020</time>
+                        </footer>
+                    </article>
+
+                    <article class="article mini" data-tags="книги">
+                        <a href="articleOne.html">
+                            <figure class="article-item__img">
+                                <picture>
+                                    <source srcset="../img/image-3.webp 1x,
+                                                ../img/image-3@2x.webp 2x" type="image/webp">
+                                    <img src="../img/image-3.jpg 1x" srcset="../img/image-3@2x.jpg 2x" alt="Glasses on the book">
+                                </picture>
+                            </figure>
+                            <h3 class="article-item__title">Прочитано: книжные рекомендации</h3>
+                        </a>
+                        <p class="article-item__desc">Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.
+                        </p>
+                        <footer class="article-add-info">
+                            <div class="article-tags">
+                                <span>Теги:</span>
+                                <span>книги</span>
+                            </div>
+                            <time class="aarticle-pub-date" datetime="2020-07-15">15.07.2020</time>
+                        </footer>
+                    </article>
+                </div>
+                <div class="big__row">
+                    <article class="article big" data-tags="путешествия">
                         <figure class="article-item__img">
-                            <img src="../img/image1.png" alt="">
+                            <picture>
+                                <source srcset="../img/image-4.webp 1x,
+                                                ../img/image-4@2x.webp 2x" type="image/webp">
+                                <img src="../img/image-4.jpg 1x" srcset="../img/image-4@2x.jpg 2x" alt="Roses">
+                            </picture>
                         </figure>
-                        <h3 class="article-item__title">Как себя мотивировать</h3>
-                    </a>
-                    <p class="article-item__desc">Расскажу о биопсихологической теории личности Джеффри Грея, которая помогла мне разобраться в работе мотивационных стимулов.</p>
-                    <footer class="article-add-info">
-                        <div class="article-tags">
-                            <span>Теги:</span>
-                            <span>путешествия</span>
-                            <span>мотивация</span>
+
+                        <div class="article-item-big-content">
+                            <a href="articleOne.html">
+                                <h3 class="article-item__title">Путешествие в Берлин в августе </h3>
+                            </a>
+                            <p class="article-item__desc">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
+                            <footer class="article-add-info">
+                                <div class="article-tags">
+                                    <span>Теги:</span>
+                                    <span>путешествия</span>
+                                </div>
+                                <time class="aarticle-pub-date" datetime="2020-09-29">29.09.2020</time>
+                            </footer>
                         </div>
-                        <time class="aarticle-pub-date" datetime="2020-09-29">29.09.2020</time>
-                    </footer>
-                </article>
+                    </article>
 
-                <article class="article-item-mini article" data-tags="город">
-                    <figure class="article-item__img">
-                        <img src="../img/image2.png" alt="Glass with ace coffe">
-                    </figure>
-                    <h3 class="article-item__title">Где выпить колдбрю в Москве</h3>
-                    <p class="article-item__desc">Собрала для вас список любимых кофеен, где подают лучший летний напиток.
-                    </p>
-                    <footer class="article-add-info">
-                        <div class="article-tags">
-                            <span>Теги:</span>
-                            <span>город</span>
+                    <article class="article big" data-tags="путешествия">
+                        <figure class="article-item__img">
+                            <picture>
+                                <source srcset="../img/image-5.webp 1x,
+                            ../img/image-5@2x.webp 2x" type="image/webp">
+                                <img src="../img/image-5.jpg 1x" srcset="../img/image-5@2x.jpg 2x" alt="Cheasecake">
+                            </picture>
+                        </figure>
+
+                        <div class="article-item-big-content">
+                            <a href="articleOne.html">
+                                <h3 class="article-item__title">Путешествие в Берлин в августе </h3>
+                            </a>
+                            <p class="article-item__desc">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
+                            <footer class="article-add-info">
+                                <div class="article-tags">
+                                    <span>Теги:</span>
+                                    <span>путешествия</span>
+                                </div>
+                                <time class="aarticle-pub-date" datetime="2020-09-29">29.09.2020</time>
+                            </footer>
                         </div>
-                        <time class="aarticle-pub-date" datetime="2020-07-24">24.07.2020</time>
-                    </footer>
-                </article>
-
-                <article class="article-item-mini article" data-tags="книги">
-                    <figure class="article-item__img">
-                        <img src="../img/image3.png" alt="Glasses on books">
-                    </figure>
-                    <h3 class="article-item__title">Прочитано: книжные рекомендации</h3>
-                    <p class="article-item__desc">Рассказываю о прочитанных за последнее время книгах: фавориты и провалы.
-                    </p>
-                    <footer class="article-add-info">
-                        <div class="article-tags">
-                            <span>Теги:</span>
-                            <span>книги</span>
-                        </div>
-                        <time class="aarticle-pub-date" datetime="2020-07-15">15.07.2020</time>
-                    </footer>
-                </article>
-            </div>
-
-            <div class="articles-row-big">
-                <article class="article-item-big article" data-tags="путешествия">
-                    <figure class="article-item__img">
-                        <img src="../img/image4.png" alt="Roses">
-                    </figure>
-
-                    <div class="article-item-big-content">
-                        <h3 class="article-item__title">Путешествие в Берлин в августе </h3>
-                        <p class="article-item__desc">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
-                        <footer class="article-add-info">
-                            <div class="article-tags">
-                                <span>Теги:</span>
-                                <span>путешествия</span>
-                            </div>
-                            <time class="aarticle-pub-date" datetime="2020-09-29">29.09.2020</time>
-                        </footer>
-                    </div>
-                </article>
-
-                <article class="article-item-big article" data-tags="путешествия">
-                    <figure class="article-item__img">
-                        <img src="../img/image5.png" alt="Cheasecake">
-                    </figure>
-
-                    <div class="article-item-big-content">
-                        <h3 class="article-item__title">Путешествие в Берлин в августе </h3>
-                        <p class="article-item__desc">Летний месяц я провела в столице Германии вместе с друзьями. И вот как это было!</p>
-                        <footer class="article-add-info">
-                            <div class="article-tags">
-                                <span>Теги:</span>
-                                <span>путешествия</span>
-                            </div>
-                            <time class="aarticle-pub-date" datetime="2020-09-29">29.09.2020</time>
-                        </footer>
-                    </div>
-                </article>
+                    </article>
+                </div>
             </div>
 
             <button class="more" type="button"><span>Показать еще</span></button>
@@ -135,7 +175,11 @@
             </div>
             <article class="about-me__block">
                 <figure class="about-me__foto">
-                    <img src="../img/me.jpg" alt="I in hut">
+                    <picture>
+                        <source srcset="../img/me.webp 1x,
+                                        ../img/me@2x.webp 2x" type="image/webp">
+                        <img src="../img/me.jpg" srcset="../img/me@2x.jpg 2x" alt="My photo">
+                    </picture>
                 </figure>
                 <div class="about__content">
                     <div class="about__text">
@@ -169,7 +213,10 @@
             <div class="slaider">
                 <article class="slaider__item">
                     <figure class="slider_background slaid-1">
-                        <img src="../img/slaid1.jpg" alt="table">
+                        <picture>
+                            <source srcset="../img/portfolio-1.webp 1x, ../img/portfolio-1.webp 2x" type="image/webp">
+                            <img src="../img/portfolio-1.jpg 1x" srcset="../img/portfolio-1.jpg 2x" alt="table">
+                        </picture>
                     </figure>
                     <hgroup class="slaider__item-titles">
                         <h3>Блог HTML Academy</h3>
@@ -182,7 +229,10 @@
 
                 <article class="slaider__item whites">
                     <figure class="slider_background slaid-2">
-                        <img src="../img/slaid2.jpg" alt="Neon kiss sign">
+                        <picture>
+                            <source srcset="../img/portfolio-2.webp 1x, ../img/portfolio-2.webp 2x" type="image/webp">
+                            <img src="../img/portfolio-2.jpg 1x" srcset="../img/portfolio-2.jpg 2x" alt="Neon kiss sign">
+                        </picture>
                     </figure>
                     <hgroup class="slaider__item-titles">
                         <h3>Журнал «LNK»</h3>
@@ -195,7 +245,10 @@
 
                 <article class="slaider__item">
                     <figure class="slider_background slaid-3">
-                        <img src="../img/slaid3.jpg" alt="Writing arm">
+                        <picture>
+                            <source srcset="../img/portfolio-3.webp 1x, ../img/portfolio-3.webp 2x" type="image/webp">
+                            <img src="../img/portfolio-3.jpg 1x" srcset="../img/portfolio-3.jpg 2x" alt="Writing arm">
+                        </picture>
                     </figure>
                     <hgroup class="slaider__item-titles">
                         <h3>Журнал «Т — Л»</h3>

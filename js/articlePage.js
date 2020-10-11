@@ -1,17 +1,20 @@
 'use strict'
 
-let likeBtn = document.querySelector('.likes figure img');
+let likeBtn = document.querySelector('.likes figure svg');
 let likeCount = document.querySelector('.likes span');
 
 likeBtn.addEventListener('click', (event) => {
     let n = +likeCount.textContent;
+    let svgPath = likeBtn.querySelector('path');
 
     if (!likeBtn.classList.contains('likes-active')) {
         likeCount.textContent = ++n;
+        svgPath.setAttribute('style', 'fill: red');
         likeBtn.classList.add('likes-active');
     } else {
         likeCount.textContent = --n;
         likeBtn.classList.remove('likes-active');
+        svgPath.setAttribute('style', 'fill: #000');
     }
 });
 
@@ -28,7 +31,7 @@ commentForm.addEventListener('submit', (event) => {
     if (userName.value.length > 0 && commentText.value.length > 20) {
         let newComment = document.createElement('article');
         newComment.classList.add('comment');
-        newComment.innerHTML = `<div class="comment-info"><figure><img src="../img/user-profile.png" alt=""></figure><h5 class="commet-author">${userName.value}</h5></div><div class="comment-text">${commentText.value}</div>`;
+        newComment.innerHTML = `<div class="comment-info"><figure><img src="../img/user-profile.svg" alt=""></figure><h5 class="commet-author">${userName.value}</h5></div><div class="comment-text">${commentText.value}</div>`;
         comments.appendChild(newComment);
 
         commentTextTooltip.classList.add('hidden');
